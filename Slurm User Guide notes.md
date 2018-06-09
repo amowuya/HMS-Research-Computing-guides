@@ -4,7 +4,7 @@ date: 2018-06-08
 **[link to the full guide](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic)**
 
 ### Login
-`ssh jc604@o2.hms.harvard.edu`  
+`ssh <ecommons ID>@o2.hms.harvard.edu`  
 password: `<ecommons password>`
 
 
@@ -88,7 +88,7 @@ Actually logs into a compute node where you can test commands interactrively, ru
 |gpu|see Using O2 GPU resources|
 
 ## Monitoring Jobs
-`squeue`: show all jobs; `-u jc604` to see mine  
+`squeue`: show all jobs; `-u <ecommons ID>` to see mine  
 `scontrol show job <jobid>`: detailed job info; `-dd` shows more info
 `sstat`: shows status info for currently running jobs [more info](https://slurm.schedmd.com/sstat.html#lbAE)  
 `sacct`: reports accounting info for jobs and steps (running or completed) [more info](https://slurm.schedmd.com/sacct.html#lbAF)  
@@ -99,8 +99,8 @@ Actually logs into a compute node where you can test commands interactrively, ru
 |:------|:------|
 |`scancel <jobid>`|cancel a sepcific step or array|
 |`scancel --name <jobname>`|cancel by name assigned when submitted|
-|`scancel -u jc604`|cancel everything|
-|`scancel -t RUNNING -u jc604`|cancel all *running* jobs|
+|`scancel -u <ecommons ID>`|cancel everything|
+|`scancel -t RUNNING -u <ecommons ID>`|cancel all *running* jobs|
 |`scontrol hold <jobid>`|pause `<jobid>`|
 |`scontrol release <jobid>`|release held job|
 
@@ -130,7 +130,7 @@ If a program with a GUI uses the X11 system (eg. R, MATLAB), the program can run
 
 Need to connect to O2 with the `-XY` flags:
 
-	ssh -XY jc604@o2.hms.harvard.edu
+	ssh -XY <ecommons ID>@o2.hms.harvard.edu
 
 Include the `--x11` flag to `srun` to enable graphics forwarding:
 

@@ -13,12 +13,12 @@ Connection paramters:
 
 * host: `transfer.rc.hms.harvard.edu`
 * port: 22 (the SCP/SFTP port)
-* username: `jc604` (ecommons ID)
+* username: `<ecommons ID>` (ecommons ID)
 * password: `<ecommons password>`
 
 Make sure to transfer for `/n/groups` or `/n/dataX`, not `/home`.  
 
 Example command to transfer from Mac:
 
-	scp myfile my_o2_id@transfer.rc.hms.harvard.edu:/n/groups/lab/dir1/
+	scp myfile <ecommons ID>@transfer.rc.hms.harvard.edu:/n/groups/lab/dir1/
 
