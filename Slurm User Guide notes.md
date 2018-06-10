@@ -56,9 +56,7 @@ Specify all of these options in a script as follows:
 	#SBATCH -p short
 	#SBATCH -t 0-05:30
 	#SBATCH --mail-type=ALL
-	#SBATCH --mail-user=jhcook@g.harvard.edu
-
-	hostname
+	...
 
 ### The `srun` command
 
