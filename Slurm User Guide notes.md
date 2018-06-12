@@ -261,9 +261,16 @@ Note: "on O2, CPU usage is restricted to the cores you request..."
 ### Other documentation
 
 [File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) ([my notes](/Users/admin/Documents/HMS Research Computing guides/File Transfer.md))  
-[Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems)  
+
+[Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) ([my notes](/Users/admin/Documents/HMS Research Computing guides/Filesystems.md))  
+
 [Troubleshooting Slurm jobs](https://wiki.rc.hms.harvard.edu/display/O2/Troubleshooting+Slurm+Jobs)  
+
 [How to choose a partition in O2](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2)  
+
 [Using O2 GPU resources](https://wiki.rc.hms.harvard.edu/display/O2/Using+O2+GPU+resources)   
+
 [How to submit parallel jobs in O2](https://wiki.rc.hms.harvard.edu:8443/display/O2/How+To+Submit+Parallel+Jobs+in+O2#HowToSubmitParallelJobsinO2-DistributedMemoryParallelization)  
+
 [Using X11 applications romotely](https://wiki.med.harvard.edu/Orchestra/UsingX11ApplicationsRemotely)  
+
