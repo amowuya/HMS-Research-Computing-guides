@@ -22,7 +22,7 @@ There is (essentially) unlimited storage in the lab directory:
 	
 ### Temporary storgage
 
-Faster, but temporary, storage can be found at `/n/scratch2`. Each user is limited to 100 TB. **Note:** Files are automatically deleted after unaccessed for _30 days_. The amount of used space can be found using the command `lfs quota -h /n/scratch2`.
+Faster, but temporary, storage can be found at `/n/scratch2/ecommonsID`. Each user is limited to 100 TB. **Note:** Files are automatically deleted after unaccessed for _30 days_. The amount of used space can be found using the command `lfs quota -h /n/scratch2`.
 
 Common uses:
 
@@ -260,7 +260,7 @@ Note: "on O2, CPU usage is restricted to the cores you request..."
 ---
 ### Other documentation
 
-[File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) [my notes](/Users/admin/Documents/HMS Research Computing guides/File Transfer.md)  
+[File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) ([my notes](/Users/admin/Documents/HMS Research Computing guides/File Transfer.md))  
 [Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems)  
 [Troubleshooting Slurm jobs](https://wiki.rc.hms.harvard.edu/display/O2/Troubleshooting+Slurm+Jobs)  
 [How to choose a partition in O2](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2)  
