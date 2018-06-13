@@ -75,7 +75,7 @@ Users can compile software in their `/home` or `/n/groups` directories.
 |`scontrol release <jobid>`                                |Release a held job (allow it to run)                                                        |
 |`sinfo`                                                   |See node and partition information. Use the -N parameter to see information per node.       |
 |`squeue -u <userid>`                                      |View status of your jobs in the queue. Only non-completed jobs will be shown.               |
-|`srun --pty -t 0-00:05 -p interactive --mem 8G /bin/bash` |Start an interactive session for five minutes in the interactive queue.                     |
+|`srun --pty -t 0-00:05 -p interactive --mem 20G /bin/bash` |Start an interactive session for five minutes in the interactive queue.                     |
 
 ## Submitting Jobs
 
