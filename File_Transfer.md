@@ -20,5 +20,6 @@ Make sure to transfer for `/n/groups` or `/n/dataX`, not `/home`.
 
 Example command to transfer from Mac:
 
-	scp myfile <ecommons ID>@transfer.rc.hms.harvard.edu:/n/groups/lab/dir1/
-
+```bash
+scp myfile <ecommons ID>@transfer.rc.hms.harvard.edu:/n/groups/lab/dir1/
+```
