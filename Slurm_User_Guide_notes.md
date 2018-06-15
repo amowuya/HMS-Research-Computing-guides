@@ -18,7 +18,9 @@ I am allocated 100 GB of storage on my home directory `/home/<ecommonsID>`. This
 
 There is (essentially) unlimited storage in the lab directory:
 
-	CookPATH="/n/data2/bidmc/medicine/haigis/Cook"
+```bash
+CookPATH="/n/data2/bidmc/medicine/haigis/Cook"
+```
 	
 ### Temporary storgage
 
@@ -46,15 +48,17 @@ Common uses:
 | `module purge`                   | dump all modules                                     |
 | `module help <software>`         | displays run info                                    |
 
-### My own software
+### Your own software
 
 Users can compile software in their `/home` or `/n/groups` directories.
 
-	mfk8@login01:~$ srun --pty –p interactive –t 0-12:00 --mem 8G bash
+```bash
+mfk8@login01:~$ srun --pty –p interactive –t 0-12:00 --mem 8G bash
 	
-	mfk8@compute-a:~$ wget http://path/to/binary/mysoftware.tar.gz
-	mfk8@compute-a:~$ tar–zxvfmysoftware.tar.gz
-	mfk8@compute-a:~$ lsmysoftware/bin
+mfk8@compute-a:~$ wget http://path/to/binary/mysoftware.tar.gz
+mfk8@compute-a:~$ tar–zxvfmysoftware.tar.gz
+mfk8@compute-a:~$ lsmysoftware/bin
+```
 
 ### Programming language
 
@@ -109,11 +113,13 @@ Usefull flags for `sbatch`(there are others on the website):
 
 Specify all of these options in a script as follows:
 
-	#!/bin/bash
-	#SBATCH -p short
-	#SBATCH -t 0-05:30
-	#SBATCH --mail-type=ALL
-	...
+```bash
+#!/bin/bash
+#SBATCH -p short
+#SBATCH -t 0-05:30
+#SBATCH --mail-type=ALL
+...
+```	
 
 ### The `srun` command
 
@@ -134,14 +140,16 @@ Actually logs into a compute node where you can test commands interactrively, ru
 
 To run job steps or multiple commands in *parallel* with resources from the master allocation, use `srun`:
 
-	#/bin/bash
-	#SBATCH -c 8
-	#SBATCH --mem 32G
-	srun -c 2 --mem=8G COMMAND1 & 
-	srun -c 4 --mem=8G COMMAND2 & 
-	srun -c 1 --mem=4G COMMAND3 & 
-	srun -c 1 --mem 12G COMMAND4 & 
-	wait
+```bash
+#/bin/bash
+#SBATCH -c 8
+#SBATCH --mem 32G
+srun -c 2 --mem=8G COMMAND1 & 
+srun -c 4 --mem=8G COMMAND2 & 
+srun -c 1 --mem=4G COMMAND3 & 
+srun -c 1 --mem 12G COMMAND4 & 
+wait
+```
 
 ### Job dependencies
 
@@ -159,17 +167,23 @@ To run job steps or multiple commands in *parallel* with resources from the mast
 
 slurm scripts can take command line arguments Reference as `$1`, `$2`, etc. The script:
 
-	#!/bin/bash
-	#SBATCH –p short #SBATCH –t 0-1:00
-	python myscript.py $1 $2
+```bash
+#!/bin/bash
+#SBATCH –p short #SBATCH –t 0-1:00
+python myscript.py $1 $2
+```
 
 The job submission:
 
-	sbatch submit.run 25 output.txt
+```bash
+sbatch submit.run 25 output.txt
+```
 
 Runs as:
 
-	python myscript.py 25 output.txt
+```bash
+python myscript.py 25 output.txt
+```
 
 ## Partitions
 
@@ -208,7 +222,9 @@ Runs as:
 
 Use `sacct -j <jobid>` to get information about a job (running or completed). The following code can print a lot of info:
 
-	sacct -j <jobid> --format JobId,NNodes,Partition,NCPUs,State,ReqMem,MaxRSS,Elapsed,CPUTime,TimeLimit,ExitCode,Start,End
+```bash
+sacct -j <jobid> --format JobId,NNodes,Partition,NCPUs,State,ReqMem,MaxRSS,Elapsed,CPUTime,TimeLimit,ExitCode,Start,End
+```
 
 **`TIMEOUT` error**: the CPUTime reported will be greater than the `-t` limit you specified in your job.  
 
@@ -220,11 +236,15 @@ If contacting Research Computing for help, include the *job ID* and *job report*
 
 specify the names of`stdout` and `stderr` files:
 
-	sbatch -o myjob.out -e myjob.err myjob.sh
+```bash
+sbatch -o myjob.out -e myjob.err myjob.sh
+```
 
 include executing node name and job IDs to the file names:
 
-	sbatch -o %N_%j.out -e %N_%j.err myjob.sh
+```bash
+sbatch -o %N_%j.out -e %N_%j.err myjob.sh
+```
 
 ### Running graphical output on 02 and X11
 
@@ -232,15 +252,21 @@ If a program with a GUI uses the X11 system (eg. R, MATLAB), the program can run
 
 Need to connect to O2 with the `-XY` flags:
 
-	ssh -XY <ecommons ID>@o2.hms.harvard.edu
+```bash
+ssh -XY <ecommons ID>@o2.hms.harvard.edu
+```
 
 Include the `--x11` flag to `srun` to enable graphics forwarding:
 
-	srun --pty -p interactive -t 0-0:5 --x11 bash
+```bash
+srun --pty -p interactive -t 0-0:5 --x11 bash
+```
 
 and from within an `sbatch` job submission:
 
-	srun --x11=batch
+```bash
+srun --x11=batch
+```
 
 
 ## Running jobs on multiple cores
@@ -249,28 +275,32 @@ and from within an `sbatch` job submission:
 
 Must dictate number of cores for a run:
 
-	#SBATCH -c 8
+```bash
+#SBATCH -c 8
+```
 
 And then later in the script, a program is run and told it is given that many cores, e.g.:
 
-	tophat -p 8 ...
+```bash
+tophat -p 8 ...
+```
 
 Note: "on O2, CPU usage is restricted to the cores you request..."
 
 ---
 ### Other documentation
 
-[File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) ([my notes](/Users/admin/Documents/HMS Research Computing guides/File Transfer.md))  
+[File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) ([my guide](File_Transfer.md))  
 
-[Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) ([my notes](/Users/admin/Documents/HMS Research Computing guides/Filesystems.md))  
+[Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) ([my guide](Filesystems.md))  
 
 [Troubleshooting Slurm jobs](https://wiki.rc.hms.harvard.edu/display/O2/Troubleshooting+Slurm+Jobs)  
 
-[How to choose a partition in O2](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2)  
+[How to choose a partition in O2](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2) ([my guide](How_to_choose_a_partition_in_O2.md))  
 
 [Using O2 GPU resources](https://wiki.rc.hms.harvard.edu/display/O2/Using+O2+GPU+resources)   
 
-[How to submit parallel jobs in O2](https://wiki.rc.hms.harvard.edu:8443/display/O2/How+To+Submit+Parallel+Jobs+in+O2#HowToSubmitParallelJobsinO2-DistributedMemoryParallelization)  
+[How to submit parallel jobs in O2](https://wiki.rc.hms.harvard.edu:8443/display/O2/How+To+Submit+Parallel+Jobs+in+O2#HowToSubmitParallelJobsinO2-DistributedMemoryParallelization) ([my guide](How_To_Submit_Parallel_Jobs_in_O2.md))
 
 [Using X11 applications romotely](https://wiki.med.harvard.edu/Orchestra/UsingX11ApplicationsRemotely)  
 
