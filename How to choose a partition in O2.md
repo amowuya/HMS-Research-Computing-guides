@@ -6,7 +6,7 @@ date: 2018-06-13
 [link to full guide](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2)
 
 
-![partition_flowchart]()
+![partition_flowchart.jpeg]()
 
 Any partition can be used to request an interactive session; the interactive partition has a dedicated set of nodes and higher priority.  
 
@@ -21,10 +21,10 @@ Any partition can run single or multi-core jobs. More information is available f
 	srun -c 1 --mem 12G COMMAND4 & 
 	wait
 	
-Also, some software (especially alignment tools!) can run multi-core processess using a specific flag. Below is an example on [Bowtie2](link_to_full_doc)
+Also, some software (especially alignment tools!) can run multi-core processess using a specific flag. Below is an example on [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml)
 
 
 
-TODO: add links for flowchart image and Bowtie2 documentation page.
+
 TODO: add example of Bowtie command for multi-core
 TODO: add table of the different partitions (maybe before the flowchart?)

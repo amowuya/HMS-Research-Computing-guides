@@ -105,7 +105,7 @@ Usefull flags for `sbatch`(there are others on the website):
 |`--mail-type=ALL`    | what emails to send (`ALL`, `BEGIN`, `END`, `FAIL`, `TIME_LIMIT`, and others) |
 |`--mem=100M`         | reserve 100 MB of memory (other options `G` and `T`)                          |
 |`--open-mode=append` | append data to error and output files                                         |
-|`-o <filename>`      | write output (`stdout`) to `<filename>`                                       |
+|`-o <filename>`      | write output (`stdout`) to `<filename>`                                       | `-n 1`              | number of tasks to use with `mpi` partition
 
 Specify all of these options in a script as follows:
 
