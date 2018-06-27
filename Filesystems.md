@@ -1,8 +1,8 @@
 # Filesystems
-author: Josh Cook
-date: 2018-06-12
+author: Josh Cook  
+date: 2018-06-12  
 
-[link to the full guide](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems)
+[link to the full guide](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems)  
 
 Where to put your files depends on how big they are, who needs to see them, whether they are temporary, and how you will be accessing them.  
 
@@ -12,7 +12,7 @@ Where to put your files depends on how big they are, who needs to see them, whet
 
 Home directory: `/home/ecommonsID`  
 
-100 GB limit on the home directory.
+100 GB limit on the home directory.  
 
 ### Group
 
