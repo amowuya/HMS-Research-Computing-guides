@@ -10,7 +10,7 @@ These are guides to using the HMS Research Computing cluster. Please feel free t
 | My Guide | Full Wiki |
 |:--|:--|
 | [Slurm User Guide](Slurm_User_Guide_notes.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic) |
-| [Filesystems](File_Systems.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) |
+| [Filesystems](Filesystems.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) |
 | [Research Cluster Data Storage](Research_Cluster_Data_Storage.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/Research+Cluster+Data+Storage)
 | [How to Choose a Partition on O2](How_to_choose_a_partition_in_O2.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2) |
 | [File Transfer](File_Transfer.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) |
