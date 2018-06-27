@@ -110,16 +110,8 @@ sbatch -n 10 -c 4 -p mpi -t 3-00:00:00 --wrap="mpirun -np 10 your_mpi+openmpi_ap
 
 ### Table of common software that has parallel processing capbabilities
 
-| Software | Purpose | Flag/Command for parallel processing |
-|:---------|:--------|:-------------------------------------|
-| Bowtie2 | sequence alignment | `-p` |
+| Software | Purpose | Comments |
+|:---------|:--------|:---------|
+| Bowtie2 | sequence alignment | must use the flag `-p` |
 
 (updated: 2018-06-14)
-
-### More information on OpenMP
-
-TODO: follow link and take notes: [OpenMP](http://www.openmp.org/)
-
-### More information on OpenMPI
-
-TODO: follow link and take notes: [OpenMPI](https://www.open-mpi.org)

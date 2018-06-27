@@ -134,7 +134,7 @@ Actually logs into a compute node where you can test commands interactrively, ru
 
 #### `srun` within `sbatch` scripts
 
-**Put `srun` in front of every command in an `sbatch` script**; each denotes a job step that can be monitored.
+If you put `srun` in front of every command in an `sbatch` script, each denotes a job step that can be monitored.
 
 #### `srun` to run jobs in parallel
 
@@ -198,12 +198,32 @@ python myscript.py 25 output.txt
 |transfer    |4 cores max, 5 days limit                              |
 |gpu         |see Using O2 GPU resources                             |
 
+## Filesystem Requirements
+
+Filesystem resources make sure that your job is dispatched to a node that has the appropriate network file system accessible. The file system resources are:
+scratch2: `/n/scratch2`
+groups: `/n/groups`
+files: `/n/files` (accessible through transfer partition, but you must request access to run jobs in this partition)
+
+To request access to scratch2:
+
+```bash
+sbatch --constraint="scratch2"
+```
+
+If your job requires multiple filesystems:
+
+```bash
+sbatch --constraint="scratch2&groups"
+```
+
+
 ## Monitoring Jobs
 
+`sacct`: reports accounting info for jobs and steps (running or completed) [more info](https://slurm.schedmd.com/sacct.html#lbAF) (this is the most common comman I use to monitor jobs)  
 `squeue`: show all jobs; `-u <ecommons ID>` to see mine  
-`scontrol show job <jobid>`: detailed job info; `-dd` shows more info
+`scontrol show job <jobid>`: detailed job info; `-dd` shows more info  
 `sstat`: shows status info for currently running jobs [more info](https://slurm.schedmd.com/sstat.html#lbAE)  
-`sacct`: reports accounting info for jobs and steps (running or completed) [more info](https://slurm.schedmd.com/sacct.html#lbAF)  
 
 ## Controlling Jobs
 
