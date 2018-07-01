@@ -306,21 +306,3 @@ tophat -p 8 ...
 ```
 
 Note: "on O2, CPU usage is restricted to the cores you request..."
-
----
-### Other documentation
-
-[File Transfer](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) ([my guide](File_Transfer.md))  
-
-[Filesystems](https://wiki.rc.hms.harvard.edu/display/O2/Filesystems) ([my guide](Filesystems.md))  
-
-[Troubleshooting Slurm jobs](https://wiki.rc.hms.harvard.edu/display/O2/Troubleshooting+Slurm+Jobs)  
-
-[How to choose a partition in O2](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2) ([my guide](How_to_choose_a_partition_in_O2.md))  
-
-[Using O2 GPU resources](https://wiki.rc.hms.harvard.edu/display/O2/Using+O2+GPU+resources)   
-
-[How to submit parallel jobs in O2](https://wiki.rc.hms.harvard.edu:8443/display/O2/How+To+Submit+Parallel+Jobs+in+O2#HowToSubmitParallelJobsinO2-DistributedMemoryParallelization) ([my guide](How_To_Submit_Parallel_Jobs_in_O2.md))
-
-[Using X11 applications romotely](https://wiki.med.harvard.edu/Orchestra/UsingX11ApplicationsRemotely)  
-

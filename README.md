@@ -15,6 +15,7 @@ These are guides to using the HMS Research Computing cluster. Please feel free t
 | [How to Choose a Partition on O2](How_to_choose_a_partition_in_O2.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/How+to+choose+a+partition+in+O2) |
 | [File Transfer](File_Transfer.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/File+Transfer) |
 |[How to Submit Parallel Jobs in O2](How_To_Submit_Parallel_Jobs_in_O2.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/How+To+Submit+Parallel+Jobs+in+O2)|
+| [Personal R Packages](Personal_R_Packages.md) | [link](https://wiki.rc.hms.harvard.edu/display/O2/Personal+R+Packages)
 
 #### To come
 [Troubleshooting Jobs](https://wiki.rc.hms.harvard.edu/display/O2/Troubleshooting+Slurm+Jobs)  
@@ -22,13 +23,12 @@ These are guides to using the HMS Research Computing cluster. Please feel free t
 Custom Software:  
 
 * [Local Software Installs](https://wiki.rc.hms.harvard.edu/display/O2/Local+Software+Installs)
-* Personal [Python][], [R][], or [Perl][] packages
+* Personal [Python][] or [Perl][] packages
 
 [Using MATLAB](https://wiki.rc.hms.harvard.edu:8443/display/O2/Using+MATLAB)  
 [Using research applications on O2](https://wiki.rc.hms.harvard.edu/display/O2/Using+Applications+on+O2)  
 
 [Python]: https://wiki.rc.hms.harvard.edu/display/O2/Personal+Python+Packages
-[R]: https://wiki.rc.hms.harvard.edu/display/O2/Personal+R+Packages
 [Perl]: https://wiki.rc.hms.harvard.edu/display/O2/Personal+Perl+Packages
 
 ---
