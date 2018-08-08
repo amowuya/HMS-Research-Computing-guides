@@ -2,23 +2,22 @@
 
 author: Joshua Cook  
 date: 2018-07-01 
+updated: 2018-07-24
 
-*Note:* in this guide, replace `VersionSelected` with the version of R you want to use. At the time of writing, the newest version of R is 3.5.1, but the versions available on O2 are 3.2.5, 3.3.3, 3.4.1 (use `module spirder R` on O2 to see the current options).  
+*Note:* in this guide, replace `VersionSelected` with the version of R you want to use. At the time of writing, the newest version of R is 3.5.1, and the versions available on O2 are 3.2.5, 3.3.3, 3.4.1, and 3.5.1 (use `module spirder R` on O2 to see the current options).  
 
 
 ## Setting up a personal R library (recommended)
 
-All packages installed by R will be saved here by default. To construct the library, use the following commands: 
+All packages installed by R will be saved here by default. To construct the library, use the following commands:  
 
 ```bash
-mkdir ~/R-VersionSelected/library
-echo 'R_LIBS_USER="~/R-VersionSelected/library"' >  $HOME/.Renviron
+mkdir -p ~/R-VersionSelected/library
+echo 'R_LIBS_USER="~/R-VersionSelected/library"' > $HOME/.Renviron
 export R_LIBS_USER="~/R-VersionSelected/library"
 ```
 __command 1:__ makes a new folder which will become the library (`~` is your home directory)  
-
-__command 2:__ sets this directory as the R environment  
-
+__command 2:__ sets this directory as the library in the R environment  
 __command 3:__ makes the variable `$R_LIBS_USER` available to other processes[^1]
 
 [^1]: More information on the `export` command can be found [here](https://linuxconfig.org/learning-linux-commands-export)). 
@@ -28,7 +27,7 @@ __command 3:__ makes the variable `$R_LIBS_USER` available to other processes[^1
 Do *not* execute R from the login node. Instead, start an interactive session:  
 
 ```bash
-srun --pty -p interactive -t 0-1:00 --mem 10G /bin/bash
+srun --pty -p interactive -t 0-02:00 --mem 10G /bin/bash
 module load gcc/6.2.0 R/VersionSelected
 R
 ``` 
@@ -45,6 +44,8 @@ For packages hosted on [CRAN](https://cran.r-project.org):
 > install.packages("package_name")
 > library(package_name)
 ```
+
+When first using CRAN, you will need to select a mirror to use (ie. enter the number of the nearest option).
 
 For packages hosted on [GitHub](https://github.com):
 

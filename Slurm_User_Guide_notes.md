@@ -282,10 +282,10 @@ Include the `--x11` flag to `srun` to enable graphics forwarding:
 srun --pty -p interactive -t 0-0:5 --x11 bash
 ```
 
-and from within an `sbatch` job submission:
+and for an `sbatch` job submission:
 
 ```bash
-srun --x11=batch
+sbatch my_script.sh --x11=all
 ```
 
 
