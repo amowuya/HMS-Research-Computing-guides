@@ -22,7 +22,7 @@ Example command to copy from Mac using `scp`:
 
 ```bash
 scp myfile <ecommons ID>@transfer.rc.hms.harvard.edu:/n/data2/bidmc/medicine/haigis/
-scp myfolder -r <ecommons ID>@transfer.rc.hms.harvard.edu:/n/data2/bidmc/medicine/haigis/
+scp -r myfolder <ecommons ID>@transfer.rc.hms.harvard.edu:/n/data2/bidmc/medicine/haigis/
 ```
 
 Notice the necessity for the `-r` flag when moving/copying entire directories.  
