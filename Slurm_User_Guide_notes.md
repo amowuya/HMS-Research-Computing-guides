@@ -106,9 +106,9 @@ Usefull flags for `sbatch`(there are others on the website):
 |**`-t 0-05:30`**     | runtime limit (0 days, 5 hrs, 30 min)                                         |
 |`-c 4`               | number of cores requested per task                                            | 
 |`-e <filename>`      | send errors (`stderr`) to `<filename>`                                        |
-|`--mail-type=ALL`    | what emails to send (`ALL`, `BEGIN`, `END`, `FAIL`, `TIME_LIMIT`, and others) |
-|`--mem=100M`         | reserve 100 MB of memory (other options `G` and `T`)                          |
-|`--open-mode=append` | append data to error and output files                                         |
+|`--mail-type ALL`    | what emails to send (`ALL`, `BEGIN`, `END`, `FAIL`, `TIME_LIMIT`, and others) |
+|`--mem 100M`         | reserve 100 MB of memory (other options `G` and `T`)                          |
+|`--open-mode append` | append data to error and output files                                         |
 |`-o <filename>`      | write output (`stdout`) to `<filename>`                                       | `-n 1`              | number of tasks to use with `mpi` partition
 
 Specify all of these options in a script as follows:
@@ -117,7 +117,7 @@ Specify all of these options in a script as follows:
 #!/bin/bash
 #SBATCH -p short
 #SBATCH -t 0-05:30
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type ALL
 ...
 ```	
 
@@ -144,9 +144,9 @@ To run job steps or multiple commands in *parallel* with resources from the mast
 #/bin/bash
 #SBATCH -c 8
 #SBATCH --mem 32G
-srun -c 2 --mem=8G COMMAND1 & 
-srun -c 4 --mem=8G COMMAND2 & 
-srun -c 1 --mem=4G COMMAND3 & 
+srun -c 2 --mem 8G COMMAND1 & 
+srun -c 4 --mem 8G COMMAND2 & 
+srun -c 1 --mem 4G COMMAND3 & 
 srun -c 1 --mem 12G COMMAND4 & 
 wait
 ```
