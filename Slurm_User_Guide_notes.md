@@ -141,7 +141,7 @@ If you put `srun` in front of every command in an `sbatch` script, each denotes 
 To run job steps or multiple commands in *parallel* with resources from the master allocation, use `srun`:
 
 ```bash
-#/bin/bash
+#!/bin/bash
 #SBATCH -c 8
 #SBATCH --mem 32G
 srun -c 2 --mem 8G COMMAND1 & 
