@@ -14,8 +14,8 @@ Though many Python packages have been installed for each version of Python, it i
 | Command | Meaning |
 |---------|---------|
 | `module avail python` | show available versions of Python |
-| `module load python/version` | load a specific version of python |
-| `pip freeze` | shows the packages installed for the loaded version of python |
+| `module load python/version` | load a specific version of Python |
+| `pip freeze` | shows the packages installed for the loaded version of Python |
 
 Before using the above commands, you must have loaded gcc: `module load gcc`
 
@@ -63,10 +63,68 @@ pip install nameofpackage
 
 ## Using Conda
 
-==In Progress==
+### Basics
 
 Some common commands:
 
 | Command | Meaning |
 |---------|---------|
-| 
+| `module spider conda` | show available versions of Conda |
+| `module load conda2/version` | load a specific version of Conda |
+| `conda info --envs` | show available Conda environments |
+| `conda create -n yourenvname` | create an environment |
+| `source activate yourenvname` | activate an environment |
+| `conda-env remove -n yourenvname` | remove an environment |
+| `source deactivate` | exit the current environment |
+| `conda search nameofpackage` | search for a package |
+| `conda install nameofpackage` | install a package |
+
+### Setup
+
+Begin by loading the Conda module:
+
+```bash
+module load conda2/version
+```
+
+You can see available environments:
+
+```bash
+conda info --envs
+```
+
+or create an environment:
+
+```bash
+conda create -n yourenvname
+```
+
+When you are done, exit the environment:
+
+```bash
+source deactivate
+```
+
+### Installing Packages
+
+From within an environment, you can search for and install a package
+
+```bash
+conda search nameofpackage
+conda install nameofpackage
+```
+
+### Python Version
+
+By default, Conda uses Python 2.7. You can create a Conda environment using Python 3.
+
+```bash
+conda create -n yourenvname python=3.6.5
+source activate yourenvname
+which python
+python --version
+```
+
+The last two commands above should show you are using the desired version of Python.
+
+
