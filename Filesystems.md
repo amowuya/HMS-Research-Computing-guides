@@ -26,7 +26,7 @@ Scratch directory: `/n/scatch2/ecommonsID`
 
 Each user is entitled to 10 TB in the `/n/scratch2` filesystem. You can create your own directories inside `/n/scratch2/` and put data in there. **These files are not backed up and will be deleted if they are not accessed for 30 days.**  
 
-Scratch will not work very well with workflows that write many thousands of small files. It is designed for workflows with medium and large files (> 100 MB). Luckily, many next-gen sequencing analysis, image analysis, and other bioinformatics workflows use large files.
+Scratch will not work very well with workflows that write many thousands of small files. It is designed for workflows with medium and large files (> 100 MB).  
 
 ### Temporary filesystems
 
