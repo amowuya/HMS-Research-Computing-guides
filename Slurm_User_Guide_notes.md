@@ -279,7 +279,7 @@ ssh -XY <ecommons ID>@o2.hms.harvard.edu
 Include the `--x11` flag to `srun` to enable graphics forwarding:
 
 ```bash
-srun --pty -p interactive -t 0-0:5 --x11 bash
+srun --pty -p interactive -t 0-5:00 --x11 bash
 ```
 
 and for an `sbatch` job submission:
